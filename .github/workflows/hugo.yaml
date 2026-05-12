@@ -39,9 +39,13 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
+      # - name: Build with Hugo
+      #   run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Build with Hugo
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "https://aqa741027.github.io/blog/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
