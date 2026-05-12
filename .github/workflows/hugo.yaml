@@ -45,7 +45,8 @@ jobs:
       # - name: Build with Hugo
       #   run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Build with Hugo
-        run: hugo --gc --minify --baseURL "https://aqa741027.github.io/blog/"
+        # run: hugo --gc --minify --baseURL "https://aqa741027.github.io/blog/"
+        run: hugo --gc --minify --baseURL "https://blog.fhbks.com/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
